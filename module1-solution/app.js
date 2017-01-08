@@ -15,16 +15,16 @@
             $scope.message = validate($scope.items);
             //Changing the class name to show the messages in designated colors
             var mesg = $scope.message.toLowerCase();
-            $scope.clsName = mesg === 'too much' || mesg === 'enjoy' ? 'green' : (mesg === "please enter value(s)" ? 'red' : "");
+            $scope.clsName = mesg === 'too much!' || mesg === 'enjoy!' ? 'green' : (mesg === "please enter data first" ? 'red' : "");
         };
 
         function validate(items) {
             //Messages
             var messages = {
-                    'noval': "Please enter value(s)",
+                    'noval': "Please enter data first",
                     'comma': "The value contains only commas",
-                    'good': "Enjoy",
-                    'bad': "Too Much"
+                    'good': "Enjoy!",
+                    'bad': "Too much!"
                 }
                 //Initial checks and split
             var tmpItems = items.length !== 0 ? items.split(',') : [];
